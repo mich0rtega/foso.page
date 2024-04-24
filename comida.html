@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="comida.css">
+    <link rel="stylesheet" href="fosooo.html">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <button class="navboton" onclick="accion()"> menu </button>
+        <a href="file:///C:/Users/user/Documents/Programas%20Personales/HTML%20Y%20CSS/Html%20y%20css/Programa%20foso/fosooo.html" class="nav-enlace desaparece">Volver al Inicio</a>
+    </nav>
+
+    <script>
+        function accion(){
+            console.log("esta funcionano mi boton");
+
+            var ancla = document.getElementsByClassName('nav-enlace');
+            for (var i = 0; i< ancla.length; i++){
+                ancla[i].classList.toggle('desaparece') }
+    
+            }
+
+    </script>
+
+<!-- columnas integrantes -->
+<section class="twicesillas flex text-center">
+
+    <div class="columna">
+        
+        <h2>Tamales</h2>
+            <img src="tamales.webp" alt="tamales" class="imagen">
+            <p>El tamal es un alimento de origen precolombino, de las culturas mesoamericanas, preparado generalmente a base de masa de maíz o de arroz rellena de carnes, verduras y hortalizas, salsas y de otros .</p>
+            <hr>
+            <p>-----------</p>
+            <hr>
+            <a href="https://www.gob.mx/agricultura/articulos/tamales-una-historia-de-sabor" class="ig">Tamales Gob</a>
+            
+    </div>
+
+    <div class="columna">
+        <h2>Pozole</h2>
+            <img src="posole.webp" alt="posole" class="imagen">
+            <p>El pozole es un caldo tradicional mexicano hecho a base de granos de maíz nixtamalizados, comúnmente de la variedad cacahuazintle, al que se agregan carnes, verduras y especias muy variadas según la región. </p>
+            <hr>
+            <p>-----------</p>
+            <hr>
+            <a href="https://www.gob.mx/agricultura/articulos/pozole-profunda-historia-en-cada-plato" class="ig">Pozole Gob</a>
+    </div>
+
+    <div class="columna">
+        <h2>Tacos</h2>
+            <img src="tacos.webp" alt="taco" class="imagen">
+            <p>El taco es una preparación culinaria muy popular de México que consiste en una tortilla, generalmente de maíz, que comúnmente se enrolla para contener dentro diversos ingredientes y algún tipo de salsa y verdura.​</p>
+            <hr>
+            <p>-----------</p>
+            <hr>
+            <a href="https://www.gob.mx/agricultura/es/articulos/el-taco-un-deleite-100-mexicano" class="ig">Taco Gob</a>
+    </div>
+
+    <div class="columna">
+        <h2>Gorditas</h2>
+            <img src="shutterstock-1649304598.jpg.webp" alt="gorditas" class="imagen">
+            <p>Las gorditas son un platillo mexicano elaborado a base de masa de maíz o trigo, rellenas de chicharrón, frijol u otros ingredientes diversos.​​</p>
+            <hr>
+            <p>-----------</p>
+            <hr>
+            <a href="https://www.cultura.gob.mx/estados_nueva_2019/detalle/?estado=7&tipo=actividades&id=249233" class="ig">Gorditas Gob</a>
+    </div>
+
+
+</body>
+</html>
