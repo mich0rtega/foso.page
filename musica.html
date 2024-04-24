@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="stylesheet" href="fosooo.html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música de México</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        #game-container {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #answer {
+            width: 80%;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        button {
+            padding: 8px;
+            background-color: #0066cc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004080;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .nav-enlace{
+    display:inline-block;
+    background: black;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.nav-enlace:hover{
+    background: palevioletred;
+}
+nav{
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.navboton{
+    background: salmon;
+    color: #fff;
+    padding: 10px 0;
+    border: 3px solid #fff;
+    display: none;
+}
+@media (max-width: 600px) {
+    nav{
+        background: black;
+        flex-direction: column;
+    }
+    .nav-enlace{
+        margin: 10px 0;
+    }
+    .navboton{
+        display: inline-block
+    }
+    .desaparece{
+        display: none;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button class="navboton" onclick="accion()"> menu </button>
+        <a href="file:///C:/Users/user/Documents/Programas%20Personales/HTML%20Y%20CSS/Html%20y%20css/Programa%20foso/fosooo.html" class="nav-enlace desaparece">Volver al Inicio</a>
+    </nav>
+
+    <script>
+        function accion(){
+            console.log("esta funcionano mi boton");
+
+            var ancla = document.getElementsByClassName('nav-enlace');
+            for (var i = 0; i< ancla.length; i++){
+                ancla[i].classList.toggle('desaparece') }
+    
+            }
+
+    </script>
+    <header>
+        <h1>Música de México</h1>
+    </header>
+
+    <section>
+        <h2>Introducción</h2>
+        <p>La música de México es diversa y rica, reflejando la mezcla de influencias indígenas, españolas y africanas.
+            Desde mariachi hasta música tradicional indígena, México tiene una tradición musical vibrante.</p>
+
+        <img src="XSY6QFMRORBVXHWXW4FPSN7RY4.avif" alt="Mariachi">
+        <p>El mariachi, con sus trajes coloridos y sus instrumentos tradicionales, es un símbolo icónico de la música
+            mexicana.</p>
+
+    
+    </section>
+<section>
+    <!-- Juego dinámico -->
+    <section id="game-container">
+        <h2>Juego de Preguntas y Respuestas</h2>
+        <p id="question">¿Cuál es el instrumento principal en el mariachi?</p>
+        <input type="text" id="answer" placeholder="Tu respuesta">
+        <button onclick="checkAnswer()">Verificar</button>
+        <p id="result"></p>
+    </section>
+
+    
+
+    <script>
+        // Función para verificar la respuesta del juego
+        function checkAnswer() {
+            var userAnswer = document.getElementById("answer").value.toLowerCase();
+            var correctAnswer = "guitarra";
+            var resultContainer = document.getElementById("result");
+
+            if (userAnswer === correctAnswer) {
+                resultContainer.innerHTML = "¡Correcto! ¡Bien hecho!";
+            } else {
+                resultContainer.innerHTML = "Incorrecto. Intenta de nuevo.";
+            }
+        }
+    </script>
+        </section>
+</body>
+
+</html>
