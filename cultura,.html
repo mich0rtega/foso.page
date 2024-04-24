@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura y Belleza de México</title>
+    <link rel="stylesheet" href="fosooo.html">
+    <style>
+        /* Estilos anteriores ... */
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .juego {
+            color: #0066cc;
+        }
+
+        #matching-game {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border: 2px solid #0066cc;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .column:hover {
+            background-color: #f2f2f2;
+        }
+        .nav-enlace{
+    display:inline-block;
+    background: black;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.nav-enlace:hover{
+    background: palevioletred;
+}
+nav{
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.navboton{
+    background: salmon;
+    color: #fff;
+    padding: 10px 0;
+    border: 3px solid #fff;
+    display: none;
+}
+@media (max-width: 600px) {
+    nav{
+        background: black;
+        flex-direction: column;
+    }
+    .nav-enlace{
+        margin: 10px 0;
+    }
+    .navboton{
+        display: inline-block
+    }
+    .desaparece{
+        display: none;
+    }
+}
+.juego{
+    text-align: center;
+}
+.juego {
+            color: #0066cc;
+        }
+
+        #options-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button class="navboton" onclick="accion()"> menu </button>
+        <a href="file:///C:/Users/user/Documents/Programas%20Personales/HTML%20Y%20CSS/Html%20y%20css/Programa%20foso/fosooo.html" class="nav-enlace desaparece">Volver al Inicio</a>
+    </nav>
+
+    <script>
+        function accion(){
+            console.log("esta funcionando mi boton");
+
+            var ancla = document.getElementsByClassName('nav-enlace');
+            for (var i = 0; i< ancla.length; i++){
+                ancla[i].classList.toggle('desaparece') }
+    
+            }
+
+    </script>
+
+
+    <header>
+        <h1>Cultura y Belleza de México</h1>
+    </header>
+
+    <section>
+        <h2>La Riqueza Cultural de México</h2>
+        <p>México es conocido por su rica cultura, que abarca desde las antiguas civilizaciones indígenas hasta la
+            influencia de la época colonial española. La diversidad de tradiciones, arte, música y gastronomía hacen
+            única a la cultura mexicana.</p>
+
+        <img src="artesanias.webp" alt="Artesanía Mexicana">
+        <p>La artesanía mexicana es reconocida por sus colores vibrantes y técnicas tradicionales transmitidas de
+            generación en generación.</p>
+
+        <img src="danza.webp" alt="Baile Folklórico">
+        <p>El baile folklórico mexicano es una expresión artística que destaca la diversidad de las regiones del país y
+            sus tradiciones.</p>
+    </section>
+
+     <!-- Juego dinámico de Relacionar Columnas -->
+     <h3 class="juego">SELECCIONA LO TIPICO DE MEXICO</h3>
+     <div id="options-container">
+         <div class="option">
+             <input type="checkbox" id="option1">
+             <label for="option1">Charrería</label>
+         </div>
+         <div class="option">
+             <input type="checkbox" id="option2">
+             <label for="option2">Marachi</label>
+         </div>
+         <div class="option">
+             <input type="checkbox" id="option3">
+             <label for="option3">Danza Folklorica</label>
+         </div>
+         <div class="option">
+             <input type="checkbox" id="option4">
+             <label for="option4">Dia de los Muertos</label>
+         </div>
+         <button onclick="checkSelection()">Verificar</button>
+         <p id="selection-result"></p>
+     </div>
+ 
+     <script>
+         // Función para verificar la selección de opciones
+         function checkSelection() {
+             var option1 = document.getElementById("option1").checked;
+             var option2 = document.getElementById("option2").checked;
+             var option3 = document.getElementById("option3").checked;
+             var option4 = document.getElementById("option4").checked;
+             var selectionResult = document.getElementById("selection-result");
+ 
+             // Verificar las opciones seleccionadas
+             if (option1 && option2 && option3 && option4) {
+                 selectionResult.innerHTML = "¡Correcto! Todas son opciones típicas de México.";
+             } else {
+                 selectionResult.innerHTML = "Incorrecto. Intenta seleccionar todas las opciones típicas de México.";
+             }
+         }
+     </script>
+</body>
+
+</html>
