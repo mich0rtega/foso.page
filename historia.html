@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de México</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        #game-container {
+            margin-top: 20px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #answer {
+            width: 80%;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        button {
+            padding: 8px;
+            background-color: #0066cc;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004080;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .nav-enlace{
+    display:inline-block;
+    background: black;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+.nav-enlace:hover{
+    background: palevioletred;
+}
+nav{
+    background: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.navboton{
+    background: salmon;
+    color: #fff;
+    padding: 10px 0;
+    border: 3px solid #fff;
+    display: none;
+}
+@media (max-width: 600px) {
+    nav{
+        background: black;
+        flex-direction: column;
+    }
+    .nav-enlace{
+        margin: 10px 0;
+    }
+    .navboton{
+        display: inline-block
+    }
+    .desaparece{
+        display: none;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button class="navboton" onclick="accion()"> menu </button>
+        <a href="file:///C:/Users/user/Documents/Programas%20Personales/HTML%20Y%20CSS/Html%20y%20css/Programa%20foso/fosooo.html" class="nav-enlace desaparece">Volver al Inicio</a>
+    </nav>
+
+    <script>
+        function accion(){
+            console.log("esta funcionano mi boton");
+
+            var ancla = document.getElementsByClassName('nav-enlace');
+            for (var i = 0; i< ancla.length; i++){
+                ancla[i].classList.toggle('desaparece') }
+    
+            }
+
+    </script>
+    <h1>Historia de México</h1>
+
+    <img src="histmexi.jpeg" alt="Imagen 1" width="500">
+    <p>La historia de México se caracteriza por la presencia de civilizaciones antiguas, como la azteca y la
+        maya. La llegada de los españoles en 1519, liderados por Hernán Cortés, marcó el inicio de la colonización.
+        Tras la independencia de México en 1821, el país atravesó períodos de conflictos internos y reformas sociales.
+        La Revolución Mexicana de 1910 buscó cambios políticos y sociales. México es reconocido por su rica cultura,
+        con influencias indígenas y europeas, y por su lucha constante por la justicia y la identidad nacional.</p>
+
+    <img src="independencia-mexico-historia.webp" alt="Imagen 2" width="500">
+    <p>La Independencia de México se logró en 1821 después de una larga lucha contra el dominio colonial español.
+        Inició el 16 de septiembre de 1810 con el famoso grito de Dolores, liderado por Miguel Hidalgo y otros líderes
+        insurgentes. A lo largo de la guerra, figuras como José María Morelos y Agustín de Iturbide desempeñaron roles
+        clave. Finalmente, el Tratado de Córdoba en 1821 reconocía la independencia de México, marcando el fin del
+        dominio español y el establecimiento de una nación independiente.</p>
+
+    <!-- Juego dinámico -->
+    <div id="game-container">
+        <h2>Juego de Preguntas y Respuestas</h2>
+        <p id="question">¿Cuál fue la fecha de la independencia de México?</p>
+        <input type="text" id="answer" placeholder="Tu respuesta">
+        <button onclick="checkAnswer()">Verificar</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        // Función para verificar la respuesta del juego
+        function checkAnswer() {
+            var userAnswer = document.getElementById("answer").value.toLowerCase();
+            var correctAnswer = "16 de septiembre";
+            var resultContainer = document.getElementById("result");
+
+            if (userAnswer === correctAnswer) {
+                resultContainer.innerHTML = "¡Correcto! ¡Bien hecho!";
+            } else {
+                resultContainer.innerHTML = "Incorrecto. Intenta de nuevo.";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+    </html>
+
+</body>
+
+</html>
