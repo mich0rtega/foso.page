@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura de México - Inicio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background: url('https://w.forfun.com/fetch/20/20f1aca96a28f704faa12d40ea67f982.jpeg') center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        .menu .dropdown-content {
+            background-color: #444;
+        }
+
+        .contenido {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contenido h2 {
+            color: black;
+            font-weight: bold; /* Opcional: Puedes agregar negrita al texto */
+        }
+
+        .contenido p {
+            color: black;
+        }
+
+        .caja {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 3;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            box-shadow: 0 px 16px rgba(0, 0, 0, 0.2);
+            z-index: 3;
+            min-width: 160px;
+            border-radius: 5px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            width: 100%;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .menu .dropdown-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #444;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="menu">
+            <a href="fosooo.html">Inicio</a>
+            <a href="creadores.html">Creadores</a>
+
+            <!-- Menú desplegable -->
+            <div class="dropdown">
+                <a href="#">Menu</a>
+                <div class="dropdown-content">
+                    <a href="Historia.html">Historia</a>
+                    <a href="Comida.html">Comida</a>
+                    <a href="Musica.html">Musica</a>
+                    <a href="Cultura.html">Cultura</a>
+                </div>
+            </div>
+            <!-- Fin del menú desplegable -->
+        </div>
+
+        <div class="contenido">
+            <div class="caja">
+                <h2>MÉXICO</h2>
+                <p>Descubre la riqueza cultural de México a través de esta página.</p>
+                <button id="mensajeBtn">Clickea Esto</button>
+                <p id="mensaje"></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Cultura de México | Creado por Michelle Ortega</p>
+        </div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('mensaje').innerHTML = '¡Bienvenido, Mexico best pais del mundo';
+        }
+        document.getElementById('mensajeBtn').addEventListener('click', mostrarMensaje);
+    </script>
+    <img src="descarga-removebg-preview.png" alt="Mexico" style="display: block; margin: auto;">
+
+</body>
+
+</html>
