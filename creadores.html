@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fosooo.html">
+    <link rel="stylesheet" href="creadores.css">
+
+</head>
+<body>
+    <nav>
+        <button class="navboton" onclick="accion()"> menu </button>
+        <a href="file:///C:/Users/user/Documents/Programas%20Personales/HTML%20Y%20CSS/Html%20y%20css/Programa%20foso/fosooo.html" class="nav-enlace desaparece">Volver al Inicio</a>
+    </nav>
+
+    <script>
+        function accion(){
+            console.log("esta funcionano mi boton");
+
+            var ancla = document.getElementsByClassName('nav-enlace');
+            for (var i = 0; i< ancla.length; i++){
+                ancla[i].classList.toggle('desaparece') }
+    
+            }
+
+    </script>
+
+    <section id="creadores">
+        <h2>Creadores de la Página</h2>
+        <p>Sigue a nuestros creadores en Instagram:</p>
+        <p class="mich"><a href="https://www.instagram.com/ofmich0/?hl=es" target="_blank">Michelle Ortega</a></p>
+        <p class="mich"><a href="https://www.instagram.com/li_zeth7692/?hl=es" target="_blank">Lizeth Salinas</a></p>
+        <p class="mich"><a href="https://www.instagram.com/ivan_cv3/?hl=es" target="_blank">Ivan Castro</a></p>
+        <p class="mich"><a href="https://www.instagram.com/papaslook/?hl=es" target="_blank">Jassiel Vazquez</a></p>
+        <p class="mich"><a href="https://www.instagram.com/mndza.24/?hl=es" target="_blank">Aylin Mendoza</a></p>
+    </section>
+</body>
+</html>
